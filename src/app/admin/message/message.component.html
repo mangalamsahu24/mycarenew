@@ -2,5 +2,10 @@
 <form (ngsubmit)="sendMessage()">
     <input [(ngModel)]="messageContent" name="messageContent" required>
     <button type="submit">Send Message</button>
-  </form>
-  
+</form>
+<div *ngIf="sentMessages.length > 0">
+  <h2>Sent Messages:</h2>
+  <ul>
+      <li *ngFor="let message of sentMessages">{{ message }}</li>
+  </ul>
+</div>
