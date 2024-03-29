@@ -4,8 +4,6 @@ const mysql = require('mysql');
 const multer = require('multer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const path = require('path');
-const bcrypt = require('bcrypt');
 const port = 3000;
 
 app.use(cors()); // Enable CORS
@@ -80,8 +78,6 @@ app.get('/files', (req, res) => {
   });
 });
 
-// app.post('/login', async (req, res) => {
-//   const { email, password } = req.body;
 
 //   try {
 //     // Check if the user exists
@@ -142,15 +138,6 @@ app.get('/files', (req, res) => {
 //     res.status(500).json({ success: false, message: 'Registration failed' });
 //   }
 // });
-
-const crypto = require('crypto');
-
-// Function to hash a password using SHA-256
-function hashPassword(password) {
-  const hash = crypto.createHash('sha256');
-  hash.update(password);
-  return hash.digest('hex');
-}
 
 // Register endpoint
 app.post('/register', async (req, res) => {

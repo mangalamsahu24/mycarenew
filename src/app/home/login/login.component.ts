@@ -20,7 +20,12 @@ export class LoginComponent {
       alert('Please fill in all fields.');
       return;
     }
-  
+    const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  if (!passwordRegex.test(this.password)) {
+    alert('Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).');
+    return;
+  }
+
     // Validate email format using a simple regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(this.email)) {
