@@ -1,0 +1,143 @@
+<section id="content">
+   <!-- MAIN -->
+    <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class='bx bx-chevron-right' ></i></li>
+              <li>
+                <a class="active" href="#">Home</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="btn-download">
+            <i class='bx bxs-cloud-download' ></i>
+            <span class="text">Download PDF</span>
+          </a>
+        </div>
+    
+        <!-- <ul class="box-info">
+          <li>
+            <i class='bx bxs-calendar-check' ></i>
+            <span class="text">
+              <h3>10</h3>
+              <p>Appointments</p>
+            </span>
+          </li>
+          <li>
+            <i class='bx bxs-group' ></i>
+            <span class="text">
+              <h3>28</h3>
+              <p>patients</p>
+            </span>
+          </li>
+           <li>
+            <i class='bx bxs-' ></i>
+            <span class="text">
+              <h3>15</h3>
+              <p>Total records</p>
+            </span>
+          </li> 
+        </ul>-->
+    
+    
+        <!-- <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Recent Activity</h3>
+              <i class='bx bx-search' ></i>
+              <i class='bx bx-filter' ></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Date Order</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="https://secure.gravatar.com/avatar/d09eaad01aea86c51b4f892b4f8abf6f?s=100&d=wavatar&r=g">
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2023</td>
+                  <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="https://secure.gravatar.com/avatar/d09eaad01aea86c51b4f892b4f8abf6f?s=100&d=wavatar&r=g">
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2023</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="https://secure.gravatar.com/avatar/d09eaad01aea86c51b4f892b4f8abf6f?s=100&d=wavatar&r=g">
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2023</td>
+                  <td><span class="status process">Process</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="todo">
+            <div class="head">
+              <h3>Messages</h3>
+              <i class='bx bx-plus' ></i>
+              <i class='bx bx-filter' ></i>
+            </div>
+            <ul class="todo-list">
+              <li class="completed">
+                <p>Record updated</p>
+                <i class='bx bx-dots-vertical-rounded' ></i>
+              </li>
+              <li class="completed">
+                <p>Pending</p>
+                <i class='bx bx-dots-vertical-rounded' ></i>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+        <div class="container">
+          <h2>Appointments</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>NO.</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Phone</th>
+                <th>Doctor Type</th>
+                <th>Appointment Type</th>
+                <th>Preferred Date Time</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let appointment of appointments">
+                <td>{{ appointment.id }}</td>
+                <td>{{ appointment.firstName }}</td>
+                <td>{{ appointment.lastName }}</td>
+                <td>{{ appointment.dob }}</td>
+                <td>{{ appointment.phone }}</td>
+                <td>{{ appointment.doctorType }}</td>
+                <td>{{ appointment.appointmentType }}</td>
+                <td>{{ appointment.preferredDateTime }}</td>
+                <td>{{ appointment.status }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </main>
+      <!-- MAIN -->
+</section>

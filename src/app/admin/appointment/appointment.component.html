@@ -1,0 +1,74 @@
+<div class="mask d-flex align-items-center gradient-custom-3">
+  <div class="container h-50">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+            
+            <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+                <h2>Appointment Form</h2>
+              <div class="row mt-3 g-2">
+                <!-- First Name -->
+                <div class="form-group mb-3 col-6 col-md-9 col-lg-7 col-xl-6">
+                  <label for="firstName">First Name:</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" ngModel
+                    placeholder="Enter First Name" required>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group mb-3 col-6 col-md-9 col-lg-7 col-xl-6">
+                  <label for="lastName">Last Name:</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" ngModel
+                    placeholder="Enter Last Name" required>
+                </div>
+
+                <!-- Date of Birth with Calendar -->
+                <div class="form-group mb-3 col-6 col-md-9 col-lg-7 col-xl-6">
+                  <label for="dob">Date of Birth:</label>
+                  <input type="date" class="form-control" id="dob" name="dob" ngModel required>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group mb-3 col-6 col-md-9 col-lg-7 col-xl-6">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" ngModel
+                    placeholder="Enter Phone Number" required>
+                </div>
+
+                <!-- Doctor Type -->
+                <div class="form-group mb-3 col-6 col-md-9 col-lg-7 col-xl-6">
+                  <label for="doctorType">Doctor Type:</label>
+                  <select class="form-control" id="doctorType" name="doctorType" ngModel required>
+                    <option value="">Select Doctor Type</option>
+                    <option value="primary">Primary Care Physician</option>
+                    <option value="specialist">Specialist</option>
+                  </select>
+                </div>
+
+                <!-- Appointment Type -->
+                <div class="form-group mb-3 col-6 col-md-9 col-lg-7 col-xl-6">
+                  <label for="appointmentType">Appointment Type:</label>
+                  <select class="form-control" id="appointmentType" name="appointmentType" ngModel required>
+                    <option value="">Select Appointment Type</option>
+                    <option value="inPerson">In-Person</option>
+                    <option value="telehealth">Telehealth</option>
+                  </select>
+                </div>
+
+                <!-- Preferred Appointment Date and Time -->
+                <div class="form-group mb-3 col-6 col-md-9 col-lg-7 ">
+                  <label for="preferredDateTime">Preferred Appointment Date and Time:</label>
+                  <input type="datetime-local" class="form-control" id="preferredDateTime" name="preferredDateTime"
+                    ngModel required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary mb-3 align-items-center">Book Appointment</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
